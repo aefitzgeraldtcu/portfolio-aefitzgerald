@@ -43,8 +43,6 @@
       /* Layout*/
       --page-width: 64rem;
       --reading-width: 70ch;
-
-      /* ...existing tokens... */
       --font-stack: system-ui, 'Segoe UI', Tahoma, sans-serif;
       --color-surface-alt: #f1f5f9;
       --color-border: #e5e7eb;
@@ -75,6 +73,10 @@ a { color: var(--color-accent); }
 
 /* ==========================
    4. LAYOUT
+   Breakpoints used in this file:
+     768px  — tablet and larger
+   (CSS variables cannot be used inside @media conditions,
+    so breakpoints are documented here instead of tokenized.)
    ========================== */
    header {
       display: flex;
@@ -131,13 +133,12 @@ section {margin-bottom: var(--space-xl); }
 
 .skills-grid {
    list-style: none;
-   display: flex;
-   flex-wrap: wrap;
+   padding-left: 0;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
    gap: var(--space-md);
 }
 .skill-card {
-   flex: 1;
-   min-width: 12rem;
    padding: var(--space-md);
    background-color: var(--color-surface-alt);
    border-radius: var(--radius-md);
@@ -155,9 +156,14 @@ section {margin-bottom: var(--space-xl); }
 
 .project-list {
    list-style: none;
-   display: flex;
-   flex-direction: column;
+   padding-left: 0;
+   display: grid;
+   grid-template-columns: 1fr;
    gap: var(--space-lg);
+}
+@media (min-width: 768px) {
+   .project-list { grid-template-columns: 1fr 1fr; }
+   .project-card.featured { grid-column: span 2; }
 }
 .project-card {
    padding: var(--space-lg);
