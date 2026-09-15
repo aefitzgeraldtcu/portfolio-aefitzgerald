@@ -1,7 +1,6 @@
 # Ava Fitzgerald - Personal Portfolio
 
-A portfolio site built from scratch in HTML and CSS for WRIT 40363.
-It introduces who I am, what I am learning, and the work I have made.
+A portfolio site I created with HTML and CSS for a Multimedia Authoring class. This website discusses bio information about me, the things I'm wokring on in class, and the progress I've already made in my coding journey!
 
 **Live site:** https://aefitzgeraldtcu.github.io/portfolio-aefitzgerald/
 
