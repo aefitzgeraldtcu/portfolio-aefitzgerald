@@ -71,6 +71,11 @@ p:last-child { margin-bottom: 0; }
 
 a { color: var(--color-accent); }
 
+a:focus-visible {
+   outline: 2px solid var(--color-accent);
+   outline-offset: 2px;
+}
+
 /* ==========================
    4. LAYOUT
    Breakpoints used in this file:
