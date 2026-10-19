@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Molle:ital@0;1&display=swap');
+/* ==========================
+   1. RESET
+   ========================== */
+   *,
+   *::before,
+   *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+   }
+
+   img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+   }
+
+/* ==========================
+   2. DESIGN TOKENS
+   ========================== */
+   :root {
+      /* Color */
+      --color-bg: #fff0f5;
+      --color-surface: #ffe0ea;
+      --color-text: #685656;
+      --color-muted: #6b7280;
+      --color-accent: #bf5581;
+
+      /* Spacing - a modular scale */
+      --space-sm: 0.5rem;
+      --space-md: 1rem;
+      --space-lg: 1.5rem;
+      --space-xl: 2rem;
+
+      /* Typography */
+      --text-base: 1rem;
+      --text-h3: 1.25rem;
+      --text-h2: 1.5rem;
+      --text-h1: 2.25rem;
+      --leading-body: 1.6;
+      --leading-heading: 1.2;
+
+      /* Layout*/
+      --page-width: 64rem;
+      --reading-width: 70ch;
+      --font-stack-h: 'Molle', cursive;
+      --font-stack-b: 'Times New Roman', serif;
+      --color-surface-alt: #ffe0eabb;
+      --color-border: #959595;
+      --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+      --radius-md: 8px;
+      --radius-lg: 12px;
+   }
+
+/* ==========================
+   3. BASE ELEMENT STYLES
+   ========================== */
+   body {
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-size: var(--text-base);
+      line-height: var(--leading-body);
+      font-family: var(--font-stack-b);
+   }
+
+h1 { font-size: var(--text-h1); line-height: var(--leading-heading); font-family: var(--font-stack-h); }
+h2 {font-size: var(--text-h2); line-height: var(--leading-heading); font-family: var(--font-stack-h);}
+h3 {font-size: var(--text-h3); line-height: var(--leading-heading); font-family: var(--font-stack-b); }
+
+h1, h2, h3 { margin-bottom: var(--space-sm);}
+p { margin-bottom: var(--space-md); }
+p:last-child { margin-bottom: 0; }
+
+a { color: var(--color-accent); }
+
+a:focus-visible {
+   outline: 2px solid var(--color-accent);
+   outline-offset: 2px;
+}
+
+/* ==========================
+   4. LAYOUT
+   ========================== */
+   header {
+      display: flex;
+      align-items: center;
+      gap: var(--space-lg);
+      padding: var(--space-lg);
+      background-color: var(--color-surface);
+      margin-bottom: var(--space-lg);
+      flex-wrap: wrap;
+   }
+.header-text { flex: 1; min-width: 16rem; }
+.header-pic {
+   flex: 1;
+   background-color: var(--color-bg);
+   min-height: 18rem;
+   border-radius: var(--radius-md);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: var(--color-surface-alt);
+   min-width: 16rem;
+   box-shadow: var(--shadow-sm);
+}
+.header-pic img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   border-radius: var(--radius-lg);
+}
+
+nav {
+   padding: var(--space-md) 0;
+}
+nav a {
+   color: var(--color-text);
+   text-decoration: none;
+}
+nav a:hover { color: var(--color-accent); }
+.nav-container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-wrap: wrap;
+   gap: var(--space-md);
+}
+.nav-links { display: flex; gap: var(--space-lg); }
+.logo {
+   font-size: var(--text-h3);
+   font-weight: bold;
+   color: var(--color-text);
+   text-decoration: none;
+}
+
+section {margin-bottom: var(--space-xl); }
+
+   body {
+      max-width: var(--page-width);
+      margin: 0 auto;
+      padding: var(--space-lg) var(--space-md);
+   }
+
+.page-title {
+   padding: var(--space-md);
+   background-color: var(--color-surface-alt);
+   border-radius: var(--radius-md);
+   box-shadow: var(--shadow-sm);
+}
+
+.skills-grid {
+   list-style: none;
+   padding-left: 0;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+   gap: var(--space-md);
+}
+.skill-card {
+   padding: var(--space-md);
+   background-color: var(--color-surface-alt);
+   border-radius: var(--radius-md);
+   box-shadow: var(--shadow-sm);
+}
+
+.index {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   gap: var(--space-lg);
+}
+
+.index-image { flex: 1; min-width: 16rem; }
+.index-image img { width: 100%; border-radius: var(--radius-md); }
+.index-text { flex: 2; min-width: 16rem; max-width: var(--reading-width); }
+
+.about {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   gap: var(--space-lg);
+}
+.about-image { flex: 1; min-width: 16rem; }
+.about-image img { width: 100%; border-radius: var(--radius-md); }
+.about-text { flex: 2; min-width: 16rem; max-width: var(--reading-width); }
+
+.project-list {
+   list-style: none;
+   padding-left: 0;
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: var(--space-lg);
+}
+@media (min-width: 768px) {
+   .project-list { grid-template-columns: 1fr 1fr; }
+   .project-card.featured { grid-column: span 2; }
+}
+.project-card {
+   padding: var(--space-lg);
+   background-color: var(--color-surface);
+   border: 2px solid var(--color-border);
+   border-radius: var(--radius-md);
+   box-shadow: var(--shadow-sm);
+}
+
+.project-card figure {
+   margin-bottom: var(--space-sm);
+}
+.project-card img {
+   border-radius: var(--radius-lg);
+}
