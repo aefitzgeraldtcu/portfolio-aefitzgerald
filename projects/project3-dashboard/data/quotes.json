@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "text": "The only thing we have to fear is fear itself.",
+    "author": "Franklin D. Roosevelt",
+    "source": "First Inaugural Address, 1933"
+  },
+  {
+    "id": 2,
+    "text": "I think, therefore I am.",
+    "author": "René Descartes",
+    "source": "Discourse on the Method, 1637"
+  },
+  {
+    "id": 3,
+    "text": "The unexamined life is not worth living.",
+    "author": "Socrates",
+    "source": "Plato, Apology"
+  },
+  {
+    "id": 4,
+    "text": "A journey of a thousand miles begins with a single step.",
+    "author": "Lao Tzu",
+    "source": "Tao Te Ching (translations vary)"
+  },
+  {
+    "id": 5,
+    "text": "The only way to do great work is to love what you do.",
+    "author": "Steve Jobs",
+    "source": "Stanford commencement address, 2005"
+  },
+  {
+    "id": 6,
+    "text": "To thine own self be true.",
+    "author": "William Shakespeare",
+    "source": "Hamlet, Act 1, Scene 3"
+  },
+  {
+    "id": 7,
+    "text": "Well done is better than well said.",
+    "author": "Benjamin Franklin",
+    "source": "Poor Richard's Almanack"
+  },
+  {
+    "id": 8,
+    "text": "Fall seven times, stand up eight.",
+    "author": "Japanese proverb",
+    "source": "Traditional"
+  },
+  {
+    "id": 9,
+    "text": "Knowledge is power.",
+    "author": "Francis Bacon",
+    "source": "Meditationes Sacrae, 1597"
+  },
+  {
+    "id": 10,
+    "text": "That's one small step for man, one giant leap for mankind.",
+    "author": "Neil Armstrong",
+    "source": "Apollo 11 moon landing, 1969"
+  }
+]
